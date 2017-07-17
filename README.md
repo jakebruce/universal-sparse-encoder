@@ -35,11 +35,11 @@ This constraint, based on the sum of the sigmoid units along the *batch*
 dimension, encourages *each unit in the hidden layer* to be active for a
 desired fraction of the examples in the training batch.
 
-Discussion
-----------
-
 These two constraints together encourage 1) sparsity of representation, and 2)
 equal division of representational capacity across the hidden layer.
+
+Discussion
+----------
 
 This is a visualization of the reconstructions learned during training:
 
@@ -49,11 +49,14 @@ And here's a visualization of the filter for each unit in the hidden layer:
 
 ![filters](https://raw.githubusercontent.com/jakebruce/universal-sparse-encoder/master/imgs/filters.png "Filters")
 
-We can encode inputs as sparse binary vectors by with K-winners-take-all, which
+We can encode inputs as sparse binary vectors with K-winners-take-all, which
 produces vectors like this on digits from the MNIST test set (note that the
 network has never seen these examples before):
 
 ![encodings](https://raw.githubusercontent.com/jakebruce/universal-sparse-encoder/master/imgs/encodings.png "Encodings")
+
+The horizontal axis enumerates the digits fed to the network, and the vertical
+axis corresponds to the units in the hidden layer.
 
 It is not necessarily clear how to evaluate the quality of these encodings, but
 notice that there is clear structure shared between digits of the same class
@@ -70,7 +73,7 @@ Now compare against the sum of absolute differences between our encoded binary v
 
 ![sdr-confusion](https://raw.githubusercontent.com/jakebruce/universal-sparse-encoder/master/imgs/sdr_confusion_constraint100.png "SDR Confusion")
 
-Much better!
+Notice the clear main diagonal for digits of the same class. Much better!
 
 How important are our two auxiliary sparsity constraints that we introduced at
 the beginning? Well, we can try to evaluate their importance by quantifying the
@@ -102,5 +105,5 @@ binary encodings, which makes sense.
 
 There is nothing MNIST-specific in the model (although train.py and encode.py
 are specific to MNIST), so please feel free to train the network on any
-high-dimensional data you like, and use if useful.
+high-dimensional data you like, and use for your own projects if useful.
 
