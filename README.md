@@ -7,9 +7,8 @@ TensorFlow on MNIST digits.
 Usage:
 
 ```
-python train.py  # train on MNIST example data
-
-python encode.py # test encoder on MNIST data
+> python train.py  # train on MNIST example data
+> python encode.py # test encoder on MNIST data
 ```
 
 The autoencoder consists of a single hidden sigmoid layer that learns
