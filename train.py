@@ -50,7 +50,7 @@ LEARN_RATE_INT  = 1000  # learning rate decay interval
 BATCH_SIZE      = 100   # number of training samples per gradient computation
 TOTAL_BATCHES   = 10000 # stop training after this many batches and save the model
 
-ENABLE_CV2_VIZ  = True  # use cv2 (python-opencv) for live visualization during training
+ENABLE_CV2_VIZ  = False  # use cv2 (python-opencv) for live visualization during training
 TEST_INTERVAL   = 500   # test reconstructions and filters at regular intervals
 
 MODEL_FILE      = "saved-model/mnist-encoder" # save model here after training

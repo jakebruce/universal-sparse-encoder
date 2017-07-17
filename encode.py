@@ -35,7 +35,7 @@ from model import UniversalSparseEncoder # imported from model.py
 INPUT_SIZE     = 784   # dimensionality of MNIST input data (28x28 pixels)
 BITS           = 500   # number of bits in the encoder
 SPARSITY       = 0.05  # sparsity of our trained encoder
-ENABLE_CV2_VIZ = True  # use cv2 (python-opencv) to visualize learned encodings
+ENABLE_CV2_VIZ = False  # use cv2 (python-opencv) to visualize learned encodings
 NUM_PER_DIGIT  = 50    # test on this many copies of each digit
 BATCH_SIZE     = 10*NUM_PER_DIGIT # number of samples per batch, N of each digit
 MODEL_FILE     = "saved-model/mnist-encoder" # load trained model from here
