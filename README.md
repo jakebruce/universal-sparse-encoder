@@ -4,6 +4,14 @@ Universal Sparse Encoder
 This repository contains python code to train a soft K-sparse autoencoder using
 TensorFlow on MNIST digits.
 
+Usage:
+
+```
+python train.py  # train on MNIST example data
+
+python encode.py # test encoder on MNIST data
+```
+
 The autoencoder consists of a single hidden sigmoid layer that learns
 representations for denoising arbitrary inputs through an output layer. In
 addition to the traditional autoencoder reconstruction-based loss and L2
