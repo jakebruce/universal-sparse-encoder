@@ -11,6 +11,9 @@ Usage:
 > python encode.py # test encoder on MNIST data
 ```
 
+Visualize the training and testing by setting ``ENABLE_CV2_VIZ = True`` in
+train.py and encode.py.
+
 The autoencoder consists of a single hidden sigmoid layer that learns
 representations for denoising arbitrary inputs through an output layer. In
 addition to the traditional autoencoder reconstruction-based loss and L2
